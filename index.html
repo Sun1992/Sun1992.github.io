@@ -1,418 +1,313 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-  <title>Bin Sun</title>
-  <meta content="Bin Sun, Sun1992.github.io" name="keywords" />
-  <style media="screen" type="text/css">html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-  border: 0pt none;
-  font-family: inherit;
-  font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
-  margin: 0pt;
-  outline-color: invert;
-  outline-style: none;
-  outline-width: 0pt;
-  padding: 0pt;
-  vertical-align: baseline;
-}
-a {
-  color: #1772d0;
-  text-decoration:none;
-}
-a:focus, a:hover {
-  color: #f09228;
-  text-decoration:none;
-}
-a.paper {
-  font-weight: bold;
-  font-size: 14pt;
-}
-b.paper {
-  font-weight: bold;
-  font-size: 14pt;
-}
-* {
-  margin: 0pt;
-  padding: 0pt;
-}
-body {
-  position: relative;
-  margin: 3em auto 2em auto;
-  width: 1000px;
-  font-family: Lato, Verdana, Helvetica, sans-serif;
-  font-size: 16px;
-  background: #eee;
-}
-h2 {
-  font-family: Lato, Verdana, Helvetica, sans-serif;
-  font-size: 17pt;
-  font-weight: 700;
-}
-h3 {
-  font-family: Lato, Verdana, Helvetica, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-}
-strong {
-  font-family: Lato, Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight:bold;
-}
-ul { 
-  list-style: circle;
-}
-img {
-  border: none;
-}
-li {
-  padding-bottom: 0.5em;
-  margin-left: 1.4em;
-}
-alert {
-  font-family: Lato, Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #FF0000;
-}
-em, i {
-  font-style:italic;
-}
-div.section {
-  clear: both;
-  margin-bottom: 1.5em;
-  background: #eee;
-}
-div.spanner {
-  clear: both;
-}
-div.paper {
-  clear: both;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 1em 1em 1em 1em;
-}
-div.paper div {
-  padding-left: 230px;
-}
-img.paper {
-  margin-bottom: 0.5em;
-  float: left;
-  width: 200px;
-}
-span.blurb {
-  font-style:italic;
-  display:block;
-  margin-top:0.75em;
-  margin-bottom:0.5em;
-}
-pre, code {
-  font-family: 'Lucida Console', 'Andale Mono', 'Courier', monospaced;
-  margin: 1em 0;
-  padding: 0;
-}
-div.paper pre {
-  font-size: 0.9em;
-}
-</style>
-
-<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" /><!--<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>--><!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>--><!--<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bin Sun | Researcher · Builder · Startup Operator</title>
+  <meta name="description" content="Bin Sun is an AI research scientist, model builder, and startup operator working across generative AI, production computer vision, and research-driven startups." />
+  <meta name="keywords" content="Bin Sun, generative AI, computer vision, startup, research scientist, model builder, startup operator, image restoration, image enhancement, Topaz Labs, Giaran" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: #222;
+      background: #f4f5f7;
+      font-family: Lato, Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    a { color: #1769aa; text-decoration: none; }
+    a:hover { color: #d97706; }
+    strong { font-weight: 700; }
+    .container { width: min(1000px, calc(100% - 32px)); margin: 32px auto 56px; }
+    .hero, .card {
+      background: #fff;
+      border: 1px solid #e3e5e8;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.035);
+    }
+    .hero { padding: 24px; display: flex; gap: 24px; align-items: center; }
+    .hero img { width: 150px; height: 150px; object-fit: cover; border-radius: 10px; flex: 0 0 auto; }
+    .hero h1 { margin: 0 0 4px; font-size: 32px; line-height: 1.2; }
+    .hero .title { font-size: 18px; font-weight: 700; margin-bottom: 3px; }
+    .hero .subtitle { color: #555; margin-bottom: 10px; }
+    .links { display: flex; gap: 14px; flex-wrap: wrap; font-weight: 700; }
+    .identity-strip { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 12px; }
+    .identity-pill { display: inline-block; padding: 5px 10px; border: 1px solid #d9e1e8; border-radius: 999px; background: #f7f9fb; font-size: 13px; font-weight: 700; letter-spacing: .01em; }
+    .journey-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+    .journey { border: 1px solid #e7e8ea; border-radius: 10px; padding: 14px; background: #fafafa; }
+    .journey .kicker { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: #6b7280; font-weight: 700; }
+    .journey .headline { font-size: 17px; font-weight: 700; margin: 4px 0 5px; }
+    .journey .desc { color: #555; font-size: 14px; }
+    .operator-note { margin-top: 14px; padding-top: 13px; border-top: 1px solid #eceef0; color: #444; }
+    .section { margin-top: 24px; }
+    .section h2 { margin: 0 0 10px; font-size: 23px; }
+    .card { padding: 20px 22px; }
+    .lead { font-size: 17px; }
+    .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+    .impact {
+      border: 1px solid #e7e8ea;
+      border-radius: 10px;
+      padding: 12px;
+      background: #fafafa;
+    }
+    .impact .number { font-size: 22px; font-weight: 700; }
+    .impact .label { font-size: 13px; color: #666; }
+    .timeline-item { padding: 2px 0 18px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-head { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; flex-wrap: wrap; }
+    .timeline-role { font-size: 17px; font-weight: 700; }
+    .timeline-date { color: #666; white-space: nowrap; }
+    .timeline-company { color: #444; margin: 1px 0 7px; }
+    ul { margin: 7px 0 0 20px; padding: 0; }
+    li { margin-bottom: 5px; }
+    .news-list li { margin-bottom: 7px; }
+    .pub {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid #eceef0;
+    }
+    .pub:first-child { padding-top: 0; }
+    .pub:last-child { border-bottom: 0; padding-bottom: 0; }
+    .pub img { width: 190px; max-height: 125px; object-fit: contain; border-radius: 6px; background: #fafafa; }
+    .pub-title { font-size: 17px; font-weight: 700; margin-bottom: 3px; }
+    .pub-meta { color: #444; }
+    .tag { display: inline-block; padding: 2px 7px; margin-left: 5px; border-radius: 10px; background: #f0f4f8; font-size: 12px; font-weight: 700; }
+    .small-note { color: #666; font-size: 14px; }
+    .patents li, .activities li { margin-bottom: 8px; }
+    footer { text-align: center; color: #777; font-size: 13px; margin-top: 28px; }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 20px, 1000px); margin-top: 14px; }
+      .hero { align-items: flex-start; }
+      .hero img { width: 112px; height: 112px; }
+      .impact-grid { grid-template-columns: repeat(2, 1fr); }
+      .journey-grid { grid-template-columns: 1fr; }
+      .pub { grid-template-columns: 1fr; }
+      .pub img { width: 100%; max-height: 180px; }
+    }
+    @media (max-width: 520px) {
+      .hero { display: block; }
+      .hero img { margin-bottom: 14px; }
+      .impact-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-45959174-3', 'kailigo.github.io');
-  ga('send', 'pageview');
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-66888300-1', 'auto');
-  ga('send', 'pageview');
-</script>
 <body>
-<div style="margin-bottom: 1em; border: 1px solid #ddd; background-color: #fff; padding: 1em; height: 140px;">
-<div style="margin: 0px auto; width: 100%;">
-<img title="Bin" style="float: left; padding-left: .5em; height: 140px;" src="Bin.png" />
-<div style="padding-left: 12em; vertical-align: top; height: 120px;"><span style="line-height: 150%; font-size: 20pt;">Bin Sun</span><br />
-<span><strong>Senior Research Scientist in Picsart AI Research</strong></span><br />
-<!--<span><a href='http://cvrs.whu.edu.cn/'>Computer Vision & Remote Sensing (CVRS) Lab </a> <br /> </q>-->
-<span>Ph.D. from Northeastern University, SMILELab</span><br />
-<!-- <span><strong>Office</strong>: Richard Center, 360 Huntington Ave, Boston, MA 02115</span><br /> -->
-<span><strong>Email  </strong>: bin.sun [at] picsart.com <br />
-<strong><a href='https://github.com/Sun1992'>Github</a></strong>  &nbsp &nbsp
-<strong><a href='https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en'>Google Scholar</a></strong></span><br/>
+<div class="container">
+  <header class="hero">
+    <img title="Bin Sun" src="Bin.png" alt="Bin Sun" />
+    <div>
+      <h1>Bin Sun</h1>
+      <div class="title">AI Research Scientist · Model Builder · Startup Operator</div>
+      <div class="identity-strip">
+        <span class="identity-pill">Researcher</span>
+        <span class="identity-pill">Builder</span>
+        <span class="identity-pill">Startup Operator</span>
+      </div>
+      <div class="subtitle">Generative AI · Production Vision Models · Research-Driven Startups</div>
+      <div class="subtitle">Topaz Labs · Dallas, TX · Ph.D., Northeastern University</div>
+      <div class="links">
+        <a href="https://github.com/Sun1992">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en">Google Scholar</a>
+      </div>
+    </div>
+  </header>
 
-<!-- <span><strong> <a href='https://github.com/kailigo'>Github</a> </strong></span> <br /> -->
-<!-- <span><strong> <a href='https://scholar.google.com/citations?hl=en&user=YsROc4UAAAAJ'>Google Scholar</a> </strong></span> <br /> -->
+  <section class="section">
+    <h2>About</h2>
+    <div class="card lead">
+      I build AI from <strong>research idea to production system</strong>. My work sits at the intersection of <strong>research, model development, productization, and startup execution</strong>: publishing highly cited computer-vision research, inventing patented technologies, deploying AI on consumer devices, and shipping commercial generative-AI models.
+      <br /><br />
+      Today I am a Research Scientist at <a href="https://www.topazlabs.com"><strong>Topaz Labs</strong></a>, where I develop and own production image models including <strong>Wonder3 / Wonder3.5</strong> and <strong>Recover v3</strong>. Previously, I built local generative image-editing models at Topaz and led Stable Diffusion-based product research at <a href="https://picsart.com"><strong>Picsart AI Research</strong></a>.
+      <br /><br />
+      I also bring a startup-builder perspective. I was a founding member of <a href="https://www.businesswire.com/news/home/20171107006109/en/Shiseido-Americas-Acquires-Giaran-Inc."><strong>Giaran</strong></a>, where I helped build real-time facial-analysis technology before the company was acquired by Shiseido, and I later worked with AInnovationLabs. Across these roles, I have repeatedly worked in small, research-driven teams where technical ideas had to become usable products.
+      <br /><br />
+      I received my Ph.D. in Electrical and Computer Engineering from <a href="https://www.northeastern.edu/">Northeastern University</a>, advised by <a href="http://www1.ece.neu.edu/~yunfu/">Prof. Yun Fu</a> at <a href="https://web.northeastern.edu/smilelab/">SMILE Lab</a>. My research has appeared at ICLR, CVPR, AAAI, TNNLS, BMVC, and related venues.
+
+      <div class="impact-grid">
+        <div class="impact"><div class="number">1,284+</div><div class="label">Google Scholar citations</div></div>
+        <div class="impact"><div class="number">11</div><div class="label">h-index</div></div>
+        <div class="impact"><div class="number">440+</div><div class="label">citations on co-first-author challenge work</div></div>
+        <div class="impact"><div class="number">130+</div><div class="label">citations on first-author AAAI work</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Researcher × Builder × Startup Operator</h2>
+    <div class="card">
+      <div class="journey-grid">
+        <div class="journey">
+          <div class="kicker">Researcher</div>
+          <div class="headline">Research depth with external validation</div>
+          <div class="desc">1,284+ Google Scholar citations, ICLR/CVPR Oral papers, AAAI and TNNLS publications, and a CVPR challenge-winning co-first-author work.</div>
+        </div>
+        <div class="journey">
+          <div class="kicker">Builder</div>
+          <div class="headline">End-to-end production model ownership</div>
+          <div class="desc">Built and shipped generative image-editing, restoration, and enhancement models including Generative Remove, Recover v3, and Wonder3 / Wonder3.5.</div>
+        </div>
+        <div class="journey">
+          <div class="kicker">Startup Operator</div>
+          <div class="headline">Experience inside research-driven startups</div>
+          <div class="desc">Founding-team experience at Giaran through acquisition by Shiseido, followed by multiple startup and scale-up R&amp;D roles bridging research and commercialization.</div>
+        </div>
+      </div>
+      <div class="operator-note"><strong>Operating principle:</strong> strong research matters most when it survives contact with real users, real hardware, and real product constraints.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Experience</h2>
+    <div class="card">
+      <div class="timeline-item">
+        <div class="timeline-head"><div class="timeline-role">Research Scientist · Topaz Labs</div><div class="timeline-date">2025 – Present</div></div>
+        <div class="timeline-company">Generative image enhancement, restoration, and production model ownership</div>
+        <ul>
+          <li>Developed and owned core model work for <strong>Wonder3 and Wonder3.5</strong>, Topaz's flagship image-enhancement models.</li>
+          <li>Developed <strong>Recover v3</strong> for restoration of degraded and low-quality imagery.</li>
+          <li>Worked end-to-end across model architecture, training, evaluation, optimization, and production deployment.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head"><div class="timeline-role">Senior Research Scientist · Picsart AI Research</div><div class="timeline-date">2024 – 2025</div></div>
+        <div class="timeline-company">Generative AI and diffusion-model product research</div>
+        <ul>
+          <li>Led development of Stable Diffusion-based models for high-quality image generation and editing.</li>
+          <li>Drove model research, training, and productization for production generative-AI capabilities.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head"><div class="timeline-role">Deep Learning Researcher · Topaz Labs</div><div class="timeline-date">2023 – 2024</div></div>
+        <div class="timeline-company">Generative image editing and efficient local inference</div>
+        <ul>
+          <li>Developed generative inpainting technology for <a href="https://community.topazlabs.com/t/generative-remove-with-local-processing-november-2023/55465/1"><strong>Generative Remove</strong></a>.</li>
+          <li>Optimized Stable Diffusion-style models for local inference on consumer laptops.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head"><div class="timeline-role">Startup &amp; Early Industry Experience</div><div class="timeline-date">2017 – 2022</div></div>
+        <ul>
+          <li><strong>Founding member, Giaran</strong>; helped build the core real-time facial alignment / tracking technology and experienced the startup journey through acquisition by Shiseido.</li>
+          <li>Computer Vision Engineer, <strong>Zebra Technologies</strong>; developed automated chute-fullness detection technology.</li>
+          <li>Worked with <strong>AInnovationLabs</strong> on research-driven startup development, expanding experience across early-stage AI product building.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Selected Highlights</h2>
+    <div class="card">
+      <ul class="news-list">
+        <li><strong>2025–2026:</strong> Developed production image models including <strong>Recover v3</strong> and <strong>Wonder3 / Wonder3.5</strong> at Topaz Labs.</li>
+        <li><strong>2024:</strong> Joined Picsart AI Research as Senior Research Scientist and led Stable Diffusion-based product research.</li>
+        <li><strong>2023:</strong> Released Topaz's local generative image-editing capability, deploying diffusion models on consumer laptops.</li>
+        <li><strong>2023:</strong> <strong>Image as Set of Points</strong> accepted to ICLR as a <strong>top-5% Oral</strong>.</li>
+        <li><strong>2022:</strong> <strong>Towards Layer-wise Image Vectorization</strong> accepted to CVPR as an <strong>Oral</strong>.</li>
+        <li><strong>2021:</strong> Team won <strong>1st place in both RGB and RGB-D tracks</strong> of the CVPR Sign Language Recognition Challenge.</li>
+        <li><strong>2017:</strong> Giaran, where I was a founding team member, was acquired by <strong>Shiseido</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Selected Publications <span class="small-note">[<a href="https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en">Full list on Google Scholar</a>]</span></h2>
+    <div class="card">
+      <div class="pub">
+        <img src="./pic/SAMSLR.png" alt="Skeleton-aware multi-modal sign language recognition" />
+        <div>
+          <div class="pub-title">Skeleton-Aware Multi-Modal Sign Language Recognition <span class="tag">Co-first author</span> <span class="tag">1st Place</span> <span class="tag">440+ citations</span></div>
+          <div class="pub-meta">Songyao Jiang*, <strong><u>Bin Sun*</u></strong>, Lichen Wang, Yue Bai, Kunpeng Li, Yun Fu</div>
+          <div>CVPR Workshop, 2021 · 1st Prize in both RGB and RGB-D challenge tracks</div>
+          <div><a href="https://openaccess.thecvf.com/content/CVPR2021W/ChaLearn/papers/Jiang_Skeleton_Aware_Multi-Modal_Sign_Language_Recognition_CVPRW_2021_paper.pdf">[PDF]</a> <a href="https://github.com/jackyjsy/CVPR21Chal-SLR">[Code]</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="./pic/HPUN.png" alt="Hybrid Pixel-Unshuffled Network" />
+        <div>
+          <div class="pub-title">Hybrid Pixel-Unshuffled Network for Lightweight Image Super-Resolution <span class="tag">First author</span> <span class="tag">130+ citations</span></div>
+          <div class="pub-meta"><strong><u>Bin Sun</u></strong>, Yulun Zhang, Songyao Jiang, Yun Fu</div>
+          <div>AAAI, 2023</div>
+          <div><a href="https://arxiv.org/pdf/2203.08921.pdf">[PDF]</a> <a href="https://github.com/Sun1992/HPUN">[Code]</a> <a href="https://youtu.be/WzTY4diSeoA">[Demo]</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="./pic/CoCs.png" alt="Image as Set of Points" />
+        <div>
+          <div class="pub-title">Image as Set of Points <span class="tag">ICLR Oral</span> <span class="tag">130+ citations</span></div>
+          <div class="pub-meta">Xu Ma*, Yuqian Zhou*, Huan Wang, Can Qin, <strong><u>Bin Sun</u></strong>, Chang Liu, Yun Fu</div>
+          <div>ICLR, 2023 · top 5% Oral</div>
+          <div><a href="https://arxiv.org/pdf/2303.01494">[PDF]</a> <a href="https://github.com/ma-xu/Context-Cluster">[Code]</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="./pic/LIVE.png" alt="Towards Layer-wise Image Vectorization" />
+        <div>
+          <div class="pub-title">Towards Layer-wise Image Vectorization <span class="tag">CVPR Oral</span> <span class="tag">150+ citations</span></div>
+          <div class="pub-meta">Xu Ma, Yuqian Zhou, Xingqian Xu, <strong><u>Bin Sun</u></strong>, Valerii Filev, Nikita Orlov, Yun Fu, Humphrey Shi</div>
+          <div>CVPR, 2022 · Oral</div>
+          <div><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Ma_Towards_Layer-Wise_Image_Vectorization_CVPR_2022_paper.pdf">[PDF]</a> <a href="https://github.com/Picsart-AI-Research/LIVE-Layerwise-Image-Vectorization">[Code]</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="./pic/LRPRNet.png" alt="LRPRNet" />
+        <div>
+          <div class="pub-title">LRPRNet: Lightweight Deep Network by Low-Rank Pointwise Residual Convolution <span class="tag">First author</span></div>
+          <div class="pub-meta"><strong><u>Bin Sun</u></strong>, Jun Li, Ming Shao, Yun Fu</div>
+          <div>IEEE TNNLS, 2021</div>
+          <div><a href="https://ieeexplore.ieee.org/iel7/5962385/6104215/09629225.pdf">[PDF]</a> <a href="https://patentimages.storage.googleapis.com/b6/b1/03/e9d2e9c1bc0114/US20220156554A1.pdf">[Patent]</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <img src="./pic/3DDHM.png" alt="Deep Evolutionary 3D Diffusion Heat Maps" />
+        <div>
+          <div class="pub-title">Deep Evolutionary 3D Diffusion Heat Maps for Large-Pose Face Alignment <span class="tag">First author</span></div>
+          <div class="pub-meta"><strong><u>Bin Sun</u></strong>, Ming Shao, Siyu Xia, Yun Fu</div>
+          <div>BMVC, 2018</div>
+          <div><a href="http://www.bmva.org/bmvc/2018/contents/papers/0904.pdf">[PDF]</a> <a href="https://patentimages.storage.googleapis.com/7e/1a/9f/520341ec34ad60/US11000107.pdf">[Patent]</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Patents &amp; Technology</h2>
+    <div class="card patents">
+      <ul>
+        <li><strong>US20190014884A1</strong> — Systems and Methods for Virtual Facial Makeup Removal and Simulation, Fast Facial Detection and Landmark Tracking, Reduction in Input Video Lag and Shaking, and Makeup Recommendation <span class="small-note">(Shiseido)</span></li>
+        <li><strong>WO2019213459A1</strong> — System and Method for Generating Image Landmarks</li>
+        <li><strong>US11210549B2</strong> — Automated Chute Fullness Detection <span class="small-note">(Zebra Technologies)</span></li>
+        <li><strong>WO2020247545A1</strong> — Light-Weight Decompositional Convolution Neural Network</li>
+        <li><strong>WO2021163103A1</strong> — Light-Weight Pose Estimation Network with Multi-Scale Heatmap Fusion</li>
+        <li><strong>US20230153946A1</strong> — System and Method for Image Super-Resolution</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Awards &amp; Professional Service</h2>
+    <div class="card activities">
+      <ul>
+        <li><strong>1st Prize</strong> in both RGB and RGB-D tracks, CVPR 2021 Challenge on Large Scale Signer Independent Isolated Sign Language Recognition.</li>
+        <li><strong>4th Place</strong>, CVPR 2021 Challenge on Agriculture Vision.</li>
+        <li><strong>Star Intern of the Year</strong>, Zebra Technologies, 2019.</li>
+        <li><strong>GapFund360 Award</strong>, Northeastern University, 2018.</li>
+        <li><strong>PC Member / Reviewer:</strong> CVPR, ICCV, AAAI, IJCAI, FG, TPAMI, TIP, TCSVT, IET Image Processing, JEI, CIM.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Last updated September 2026.</footer>
 </div>
-</div>
-</div>
-<!--<div style="clear: both; background-color: #fff; margin-top: 1.5em; padding: .2em; padding-left: .3em;">-->
-
-<div style="clear: both;">
-<div class="section">
-<h2>About Me</h2>
-<div class="paper">
-<!--I am a Research Scientist at Facebook Reality Labs (<a href='https://research.fb.com/people/li-kunpeng/'>FB page</a>). -->
-I am a Senior Research Scientist at <a href='https://picsart.com'><strong>Picsart AI Research</strong></a>. My current research interests lie in Generative AI and efficient model.
- <br />  <br /> I received my Ph.D degree from Electrical and Computer Engineering Department, <a href='http://www.northeastern.edu/'>Northeastern University</a>, advised by <a href='http://www1.ece.neu.edu/~yunfu/'> Prof. Yun Fu</a>. During my Ph.D. career, I focus on studying Computer Vision and Deep Learning, especially learning with efficient model, Face and Pose Estimation, Multi-modality, super-resolution, agriculture vision, etc. Please find the webpage of our lab here <a href='https://web.northeastern.edu/smilelab/'>SmileLab</a>.    
-I have also spent time as a founding member in AI-startups (<a href='https://www.businesswire.com/news/home/20171107006109/en/Shiseido-Americas-Acquires-Giaran-Inc.'>Giaran acquired by Shiseido</a>, <a href='https://ainnovationlabs.com'>Ainnovationlabs</a>).
-Besides, I spent three months as a computer vision engineer in
-<a href='https://www.zebra.com/us/en.html'>Zebra</a>. In 2023, I got a great starting stage in <a href='https://www.topazlabs.com'>Topazlabs</a> as a deep learning researcher, working on generative ai and its optimization on local devices.
- 
-
-<!-- Prior to this, I obtained my bachelor degree from School of Electronic and Information Engineering, <a href='https://www.scut.edu.cn/new/'>South China University of Technology</a>, supervised by Prof. Xin Zhang and <a href='http://www.hcii-lab.net/lianwen/'>Prof. Lianwen Jin</a>. -->
-
-
-</div>
-</div>
-</div>
-
-<div style="clear: both;">
-<div class="section">
-  <h2>News</h2>
-  <div class="paper">
-    <ul>
-<!--   <li> 2018.07: One paper is accepted by <strong> ECCV 2018 </strong>.</li> 
-  <li> 2018.07: We have one paper accepted by <strong> ACM MM 2018 </strong> .</li>  -->
-  <li> 2024.2: Start my new position of Senior Research Scientist at Picsart!</li>
-  <li> 2023.11: Release the first <a href='https://community.topazlabs.com/t/generative-remove-with-local-processing-november-2023/55465/1'><strong>image editing product</strong></a> of our company! We deploy the <strong>Stable Diffusion</strong> on local laptops.</li>
-  <li> 2023.06: Goodbye Boston. Hello Dallas.</li>
-  <li> 2023.05:Get an offer from <a href='https://www.topazlabs.com'><strong>TopazLabs</strong></a> as a <strong>Deep Learning Researcher</strong>. The topic is about <strong>Image Generation</strong>.</li>
-  <li> 2023.01:One paper is accepted by <strong>ICLR</strong> as Oral.</li>
-  <li> 2022.12: Defense my PhD and graduate from <strong>Northeastern University</strong></li>
-  <li> 2022.11:One paper is accepted by <strong>AAAI</strong>.</li>
-  <li> 2022.03:One paper is accepted by <strong>CVPR</strong> as oral.</li>
-  <li> 2021.11: One paper is accepted by <strong>IEEE TNNLS</strong>.</li>
-  <li> 2021.10: Start part-time intern in <strong>Ainnovationlabs</strong>.</li>
-  <li> 2021.06: Lead the team won the <strong>4th Rank</strong> in CVPR21 Challenge on Agriculture Vision.</li>
-  <li> 2021.03: Lead the team won the <strong>1st Prize</strong> in both RGB and RGB-D tracks of CVPR21 Challenge on Large Scale Signer Independent Isolated Sign Language Recognition <a href='https://github.com/jackyjsy/CVPR21Chal-SLR'>[code]</a> <a href='http://chalearnlap.cvc.uab.es/challenge/43/description/'>[link]</a> <a href='https://coe.northeastern.edu/news/smile-lab-wins-1st-at-conference-on-computer-vision-and-pattern-recognition/'>[news]</a>.</li>
-  <li> 2020.11: Two papers are accepted by <strong>FG</strong>.</li>
-  <li> 2020.03: One patent is filed by <strong>Zebra</strong>.</li>
-  <li> 2019.06: One patent is filed by <strong>Shiseido</strong>.</li>
-  <li> 2019.05: Involved in another startup <strong>Ainnovaionlabs, Inc</strong>.</li>
-  <li> 2019.01: Start my internship at <strong>Zebra</strong>, Lincolnshire, IL.</li>
-  <li> 2018.07: Get one paper accepted by <strong> BMVC </strong>.</li>
-  <li> 2018.04: Get one paper accepted by <strong> AAAI </strong>.</li>
-  <li> 2017.11: Giaran is acquired by <strong> Shiseido </strong>.</li>
-  <li> 2017.01: Start my internship at <strong>Giaran</strong> as one of the founding members.</li>
-  <li> 2016.09: Change my program to <strong> Ph.D </strong>.</li>
-  <li> 2015.09: Begin my new journey at <strong>Northeastern University</strong>, Boston, MA.</li>
-    </ul>
-  </div>
-</div>
-</div>
-
-
-
-
-<!-- <div style="clear: both;">
-<div class="section">
-<h2 id="confpapers">Intern Experience</h2>
-
-
- -->
-
-
-<div style="clear: both;">
-<div class="section">
-<!-- <h2 id="confpapers">Previous Selected Publications</h2> -->
-  <h2>Selected Publications [<a href='https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en'>Full List and Recent Works</a>]</h2>
-
-  
-  <div class="paper" id="CoCs"><img class="paper" src="./pic/CoCs.png" title="Image as Set of Points">
-  <div> <strong>Image as Set of Points</strong><br>
-      Xu Ma*, Yuqian Zhou*, Huan Wang, Can Qin, <strong><u>Bin Sun</u></strong>, Chang Liu, Yun Fu <br>
-      International Conference on Learning Representations (<strong>ICLR</strong>), 2023 <strong>top 5% Oral</strong>
-  <a href='https://arxiv.org/pdf/2303.01494'>[PDF]</a>,
-  <a href='https://github.com/ma-xu/Context-Cluster'>[Code]</a>
-  </div>
-  <div class="spanner"></div>
-  </div>
-  
-<div class="paper" id="hpun"><img class="paper" src="./pic/HPUN.png" title="Hybrid pixel-unshuffled network for lightweight image super-resolution">
-<div> <strong>Hybrid pixel-unshuffled network for lightweight image super-resolution</strong><br>
-<strong><u>Bin Sun</u></strong>, Yulun Zhang, Songyao Jiang, Yun Fu <br>
-Association for the Advancement of Artificial Intelligence (<strong>AAAI</strong>), 2023
-<a href='https://arxiv.org/pdf/2203.08921.pdf'>[PDF]</a>,
-<a href='https://github.com/Sun1992/HPUN'>[Code]</a>,
-<a href='https://youtu.be/WzTY4diSeoA'>[Demo]</a>
-</div>
-<div class="spanner"></div>
-</div>
-  
-  <div class="paper" id="LIVE"><img class="paper" src="./pic/LIVE.png" title="Towards Layer-wise Image Vectorization">
-  <div> <strong>Towards Layer-wise Image Vectorization</strong><br>
-      Xu Ma, Yuqian Zhou, Xingqian Xu, <strong><u>Bin Sun</u></strong>, Valerii Filev, Nikita Orlov, Yun Fu, Humphrey Shi <br>
-      IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2022 <strong>Oral</strong>
-  <a href='https://openaccess.thecvf.com/content/CVPR2022/papers/Ma_Towards_Layer-Wise_Image_Vectorization_CVPR_2022_paper.pdf'>[PDF]</a>,
-  <a href='https://github.com/Picsart-AI-Research/LIVE-Layerwise-Image-Vectorization'>[Code]</a>
-  </div>
-  <div class="spanner"></div>
-  </div>
-  
-  
-  
-<div class="paper" id="LRPRNet"><img class="paper" src="./pic/LRPRNet.png" title="Visual Semantic Reasoning for Image-Text Matching">
-<div> <strong>LRPRNet: Lightweight Deep Network by Low-Rank Pointwise Residual Convolution</strong><br>
-<strong><u>Bin Sun</u></strong>, Jun Li, Ming Shao, Yun Fu <br>
-IEEE Transactions on Neural Networks and Learning Systems (<strong>TNNLS</strong>), 2021
-<a href='https://ieeexplore.ieee.org/iel7/5962385/6104215/09629225.pdf'>[PDF]</a>,
-<a href='https://patentimages.storage.googleapis.com/b6/b1/03/e9d2e9c1bc0114/US20220156554A1.pdf'>[Patent]</a>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-<div class="paper" id="SAMSLR"><img class="paper" src="./pic/SAMSLR.png" title="Skeleton aware multi-modal sign language recognition">
-<div> <strong>Skeleton aware multi-modal sign language recognition</strong><br>
-    Songyao Jiang*, <strong><u>Bin Sun*</u></strong>, Lichen Wang, Yue Bai, Kunpeng Li, Yun Fu <br>
-    IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshop (<strong>CVPRW, 1st Prize</strong>), 2021
-<a href='https://openaccess.thecvf.com/content/CVPR2021W/ChaLearn/papers/Jiang_Skeleton_Aware_Multi-Modal_Sign_Language_Recognition_CVPRW_2021_paper.pdf'>[PDF]</a>,
-<a href='https://github.com/jackyjsy/CVPR21Chal-SLR'>[Code]</a>
-
-<!-- [code]</a> -->
-</div>
-<div class="spanner"></div>
-</div>
-
-
-<div class="paper" id="EVdataset"><img class="paper" src="./pic/EVDataset.png" title="Ev-action: Electromyography-vision multi-modal action dataset">
-<div> <strong>Ev-action: Electromyography-vision multi-modal action dataset</strong><br>
-Lichen Wang, <strong><u>Bin Sun</u></strong>, Joseph Robinson, Taotao Jing, Yun Fu <br>
-IEEE International Conference on Automatic Face and Gesture Recognition (<strong>FG</strong>), 2020
-<a href='https://ieeexplore.ieee.org/iel7/9320148/9320149/09320160.pdf'>[PDF]</a>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-
-<div class="paper" id="3DDHM"><img class="paper" src="./pic/3DDHM.png" title="Deep Evolutionary 3D Diffusion Heat Maps for Large-pose Face Alignment">
-<div> <strong>Deep Evolutionary 3D Diffusion Heat Maps for Large-pose Face Alignment</strong><br>
-<strong><u>Bin Sun</u></strong>, Ming Shao, Siyu Xia, Yun Fu <br>
-British Machine Vision Conference (<strong>BMVC</strong>), 2018 <!--<strong>(Spotlight)</strong>-->
-<a href='http://www.bmva.org/bmvc/2018/contents/papers/0904.pdf'>[PDF]</a>,
-<a href='https://patentimages.storage.googleapis.com/7e/1a/9f/520341ec34ad60/US11000107.pdf'>[Patent]</a>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-<!-- <div class="paper" id="RCAN"><img class="paper" src="./pic/RCAN.png" title="Image Super-Resolution Using Very Deep Residual Channel Attention Networks">
-<div> <strong>Image Super-Resolution Using Very Deep Residual Channel Attention Networks</strong><br>
-Yulun Zhang, <strong><u>Kunpeng Li</u></strong>, Kai Li, Bineng Zhong, Yun Fu <br>
-European Conference on Computer Vision (<strong>ECCV</strong>), 2018
-<a href='https://arxiv.org/abs/1807.02758'>[PDF]</a>,
-<a href='https://github.com/yulunzhang/RCAN'>[Code]</a>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-<div class="paper" id="SN_reID"><img class="paper" src="./pic/SN_reID.png" title="Support Neighbor Loss for Person Re-Identification">
-<div> <strong>Support Neighbor Loss for Person Re-Identification</strong><br>
-Kai Li, Zhengming Ding, <strong><u>Kunpeng Li</u></strong>, Yulun Zhang, Yun Fu <br>
-ACM Multimedia (<strong>ACM MM</strong>), 2018
-<a href='https://arxiv.org/abs/1808.06030'>[PDF]</a>,
-<a href='https://github.com/kailigo/SN_loss_for_reID'>[Code]</a>
-</div>
-<div class="spanner"></div>
-</div>
- 
-
-<div class="paper" id="MDSLT"><img class="paper" src="./pic/MDSLT.png" title="Multi-stream Deep Similarity Learning Networks for Visual Tracking">
-<div> <strong>Multi-stream Deep Similarity Learning Networks for Visual Tracking</strong><br>
-<strong><u>Kunpeng Li</u></strong>, Yu Kong, Yun Fu <br>
-International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2017
-<a href='https://www.ijcai.org/proceedings/2017/0301.pdf'>[PDF]</a>,
-<a href='https://drive.google.com/file/d/1WoUK3G4khzI_qw1T48hvxa-7yPYYv3Ua/view'>[Benchmark Results]</a>,
-<a href='https://www.youtube.com/watch?v=UgrwdRQYAIA'>[Video Results]</a>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-<div class="paper" id="AirWriting"><img class="paper" src="./pic/AirWriting.png" title="A New Fingertip Detection and Tracking Algorithm and Its Application on Writing-in-the-air System">
-<div> <strong>A New Fingertip Detection and Tracking Algorithm and Its Application on Writing-in-the-air System</strong><br>
-<strong><u>Kunpeng Li</u></strong>, Xin Zhang <br>
-IEEE International Conference on Image and Signal Processing, 2014
-<a href='https://ieeexplore.ieee.org/abstract/document/7003824'>[PDF]</a>,
-<a href='https://drive.google.com/file/d/0B6GPXWGb8uiyUW8tN2tmUERxWmc/view'>[Extension]</a>,
-<a href='https://www.youtube.com/watch?v=gCHIq0OQwUM'>[Demo]</a>
-</div>
-<div class="spanner"></div>
-</div>
-
--->
-
-<div style="clear: both;">
-<div class="section">
-<h2 id="confpapers">Patents</h2>
-<div class="paper">
-<ul>
-<p><font size="5">
-    <li>  <strong>US20190014884A1</strong> systems and Methods for Virtual Facial Makeup Removal and Simulation, Fast Facial Detection and Landmark Tracking, Reduction in Input Video Lag and Shaking, and a Method for Recommending Makeup (<strong>Granted by Shiseido</strong>)  </li>
-    <li>  <strong>WO2019213459A1</strong> System and Method for Generating Image Landmarks </li>
-    <li> <strong>US11210549B2</strong> Automated chute fullness detection (<strong>Granted by Zebra</strong>) </li>
-    <li> <strong>WO2020247545A1</strong> Light-weight decompositional convolution neural network </li>
-    <li> <strong>WO2021163103A1</strong> Light-weight pose estimation network with multi-scale heatmap fusion </li>
-     <li> <strong>US20230153946A1</strong>System and Method for Image Super-Resolution</li>
-</font></p>
-</ul>
-</div>
-</div>
-</div>
-
-
-
-<div style="clear: both;">
-<div class="section">
-<h2 id="confpapers">Awards</h2>
-<div class="paper">
-    <ul>
-  
-  <li>  <strong>4th place</strong> in CVPR21 Challenge on Agriculture Vision 2021. </li>
-  <li> <strong>1st Prize</strong> in both RGB and RGB-D tracks of CVPR21 Challenge on Large Scale Signer Independent Isolated Sign Language Recognition <a href='https://github.com/jackyjsy/CVPR21Chal-SLR'>[code]</a> <a href='http://chalearnlap.cvc.uab.es/challenge/43/description/'>[link]</a> <a href='https://coe.northeastern.edu/news/smile-lab-wins-1st-at-conference-on-computer-vision-and-pattern-recognition/'>[news]</a>, 2021 </li>
-  <li> <strong>Star Intern of the Year</strong>, Zebra Corp, USA, 2019. </li>
-  <li> <strong>GapFund360 Award</strong>, Northeastern University, USA, 2018. </li>
-<!--  <li> NSF travel award for attending IJCAI, 2017. </li>
-  <li> Dean's Fellowship, College of Engineering, Northeastern University, 2016. </li>
-  <li> First Prize in Digital Image Processing Contest of Guangdong Province, 2015. </li>
-  <li> National Scholarship, South China University of Technology, 2014. </li>
-    <li> Meritorious Winner in International Mathematical Contest in Modeling, 2014. </li>  
-    <!-- <li> Best Undergraduate Thesis, School of Remote Sensing and Information Engineering, Wuhan University, 2014. </li> -->
-    <!-- <li> Excellent Undergraduate Students, Wuhan University, 2012. </li> -->
-    </ul>
-</ul>
-</div>
-</div>
-</div>
-
-<div style="clear: both;">
-<div class="section">
-<h2 id="confpapers">Professonal Activities</h2>
-<div class="paper">
-<ul>
-<p><font size="5">
-  <li> <strong>PC Member or Reviewer</strong> for CVPR, ICCV, AAAI, IJCAI, FG, TPAMI, TIP, TCSVT, IET Image Processing, JEI, CIM </li>
-  <!-- <li> External Reviewer for CVPR, ICCV, ECCV, AAAI, IJCAI, AAAI (2017). </li> -->
-    <!-- <li> Guest reviewer for AAAI 2017. </li>       -->
-  <!-- <li> IEEE student member, AAAI student member. </li>    -->
-</font></p>
-</ul>
-</div>
-</div>
-</div>
-
-
-
 </body>
 </html>
