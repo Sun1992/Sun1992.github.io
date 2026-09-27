@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bin Sun | Researcher · Builder · Startup Operator</title>
+  <title>Bin Sun | Research Scientist at Adobe</title>
   <meta name="description" content="Bin Sun is an AI research scientist, model builder, and startup operator working across generative AI, production computer vision, and research-driven startups." />
-  <meta name="keywords" content="Bin Sun, generative AI, computer vision, startup, research scientist, model builder, startup operator, image restoration, image enhancement, Topaz Labs, Giaran" />
+  <meta name="keywords" content="Bin Sun, generative AI, computer vision, startup, research scientist, model builder, startup operator, image restoration, image enhancement, Adobe, Topaz Labs, Giaran" />
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
   <style>
     * { box-sizing: border-box; }
@@ -13,22 +13,22 @@
     body {
       margin: 0;
       color: #222;
-      background: #f4f5f7;
+      background: linear-gradient(180deg, #edf3f8 0, #f6f8fb 340px, #f4f5f7 100%);
       font-family: Lato, Verdana, Helvetica, sans-serif;
       font-size: 16px;
       line-height: 1.55;
     }
-    a { color: #1769aa; text-decoration: none; }
+    a { color: #165a98; text-decoration: none; }
     a:hover { color: #d97706; }
     strong { font-weight: 700; }
     .container { width: min(1000px, calc(100% - 32px)); margin: 32px auto 56px; }
     .hero, .card {
       background: #fff;
       border: 1px solid #e3e5e8;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.035);
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(27,52,83,.045);
     }
-    .hero { padding: 24px; display: flex; gap: 24px; align-items: center; }
+    .hero { padding: 30px; display: flex; gap: 28px; align-items: center; border-top: 4px solid #246da5; }
     .hero img { width: 150px; height: 150px; object-fit: cover; border-radius: 10px; flex: 0 0 auto; }
     .hero h1 { margin: 0 0 4px; font-size: 32px; line-height: 1.2; }
     .hero .title { font-size: 18px; font-weight: 700; margin-bottom: 3px; }
@@ -42,8 +42,8 @@
     .journey .headline { font-size: 17px; font-weight: 700; margin: 4px 0 5px; }
     .journey .desc { color: #555; font-size: 14px; }
     .operator-note { margin-top: 14px; padding-top: 13px; border-top: 1px solid #eceef0; color: #444; }
-    .section { margin-top: 24px; }
-    .section h2 { margin: 0 0 10px; font-size: 23px; }
+    .section { margin-top: 30px; scroll-margin-top: 20px; }
+    .section h2 { margin: 0 0 12px; font-size: 23px; letter-spacing: -.02em; }
     .card { padding: 20px 22px; }
     .lead { font-size: 17px; }
     .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
@@ -78,6 +78,9 @@
     .pub-meta { color: #444; }
     .tag { display: inline-block; padding: 2px 7px; margin-left: 5px; border-radius: 10px; background: #f0f4f8; font-size: 12px; font-weight: 700; }
     .small-note { color: #666; font-size: 14px; }
+    .citation-note { margin: 13px 0 0; font-size: 12px; }
+    .links a { padding: 4px 0; }
+    .links a:focus-visible { outline: 2px solid #1769aa; outline-offset: 4px; }
     .patents li, .activities li { margin-bottom: 8px; }
     footer { text-align: center; color: #777; font-size: 13px; margin-top: 28px; }
     @media (max-width: 760px) {
@@ -102,15 +105,18 @@
     <img title="Bin Sun" src="Bin.png" alt="Bin Sun" />
     <div>
       <h1>Bin Sun</h1>
-      <div class="title">AI Research Scientist · Model Builder · Startup Operator</div>
+      <div class="title">Research Scientist at Adobe</div>
       <div class="identity-strip">
         <span class="identity-pill">Researcher</span>
         <span class="identity-pill">Builder</span>
         <span class="identity-pill">Startup Operator</span>
       </div>
       <div class="subtitle">Generative AI · Production Vision Models · Research-Driven Startups</div>
-      <div class="subtitle">Topaz Labs · Dallas, TX · Ph.D., Northeastern University</div>
+      <div class="subtitle">Adobe · Dallas, TX · Ph.D., Northeastern University</div>
       <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
         <a href="https://github.com/Sun1992">GitHub</a>
         <a href="https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en">Google Scholar</a>
       </div>
@@ -118,22 +124,23 @@
   </header>
 
   <section class="section">
-    <h2>About</h2>
+    <h2 id="about">About</h2>
     <div class="card lead">
       I build AI from <strong>research idea to production system</strong>. My work sits at the intersection of <strong>research, model development, productization, and startup execution</strong>: publishing highly cited computer-vision research, inventing patented technologies, deploying AI on consumer devices, and shipping commercial generative-AI models.
       <br /><br />
-      Today I am a Research Scientist at <a href="https://www.topazlabs.com"><strong>Topaz Labs</strong></a>, where I develop and own production image models including <strong>Wonder3 / Wonder3.5</strong> and <strong>Recover v3</strong>. Previously, I built local generative image-editing models at Topaz and led Stable Diffusion-based product research at <a href="https://picsart.com"><strong>Picsart AI Research</strong></a>.
+      I am a <strong>Research Scientist at <a href="https://www.adobe.com/">Adobe</a></strong>, following Adobe’s September 2026 acquisition of <a href="https://www.topazlabs.com">Topaz Labs</a>, where I developed production AI models. My model work includes <strong>Wonder 3 / 3.5</strong> and <strong>Recover v3</strong>, spanning image enhancement, restoration, and deployment. Earlier, I developed local generative image-editing models at Topaz and led diffusion-model product research at <a href="https://picsart.com"><strong>Picsart AI Research</strong></a>.
       <br /><br />
       I also bring a startup-builder perspective. I was a founding member of <a href="https://www.businesswire.com/news/home/20171107006109/en/Shiseido-Americas-Acquires-Giaran-Inc."><strong>Giaran</strong></a>, where I helped build real-time facial-analysis technology before the company was acquired by Shiseido, and I later worked with AInnovationLabs. Across these roles, I have repeatedly worked in small, research-driven teams where technical ideas had to become usable products.
       <br /><br />
       I received my Ph.D. in Electrical and Computer Engineering from <a href="https://www.northeastern.edu/">Northeastern University</a>, advised by <a href="http://www1.ece.neu.edu/~yunfu/">Prof. Yun Fu</a> at <a href="https://web.northeastern.edu/smilelab/">SMILE Lab</a>. My research has appeared at ICLR, CVPR, AAAI, TNNLS, BMVC, and related venues.
 
       <div class="impact-grid">
-        <div class="impact"><div class="number">1,284+</div><div class="label">Google Scholar citations</div></div>
+        <div class="impact"><div class="number">1,300+</div><div class="label">reported research citations*</div></div>
         <div class="impact"><div class="number">11</div><div class="label">h-index</div></div>
         <div class="impact"><div class="number">440+</div><div class="label">citations on co-first-author challenge work</div></div>
-        <div class="impact"><div class="number">130+</div><div class="label">citations on first-author AAAI work</div></div>
+        <div class="impact"><div class="number">59</div><div class="label">completed peer reviews (reported)</div></div>
       </div>
+      <p class="small-note citation-note">*Self-reported citation count as of September 2026; includes publications and patents. See Google Scholar for the current indexed count.</p>
     </div>
   </section>
 
@@ -144,7 +151,7 @@
         <div class="journey">
           <div class="kicker">Researcher</div>
           <div class="headline">Research depth with external validation</div>
-          <div class="desc">1,284+ Google Scholar citations, ICLR/CVPR Oral papers, AAAI and TNNLS publications, and a CVPR challenge-winning co-first-author work.</div>
+          <div class="desc">1,300+ reported research citations, ICLR/CVPR Oral papers, AAAI and TNNLS publications, and a CVPR challenge-winning co-first-author work.</div>
         </div>
         <div class="journey">
           <div class="kicker">Builder</div>
@@ -154,7 +161,7 @@
         <div class="journey">
           <div class="kicker">Startup Operator</div>
           <div class="headline">Experience inside research-driven startups</div>
-          <div class="desc">Founding-team experience at Giaran through acquisition by Shiseido, followed by multiple startup and scale-up R&amp;D roles bridging research and commercialization.</div>
+          <div class="desc">Founding-team experience at Giaran through its acquisition by Shiseido, and production AI model work at Topaz Labs through its 2026 acquisition by Adobe.</div>
         </div>
       </div>
       <div class="operator-note"><strong>Operating principle:</strong> strong research matters most when it survives contact with real users, real hardware, and real product constraints.</div>
@@ -162,13 +169,14 @@
   </section>
 
   <section class="section">
-    <h2>Experience</h2>
+    <h2 id="experience">Experience</h2>
     <div class="card">
       <div class="timeline-item">
-        <div class="timeline-head"><div class="timeline-role">Research Scientist · Topaz Labs</div><div class="timeline-date">2025 – Present</div></div>
+        <div class="timeline-head"><div class="timeline-role">Research Scientist · Adobe <span class="tag">Topaz Labs acquisition</span></div><div class="timeline-date">Sep 2026 – Present</div></div>
+        <div class="timeline-company">Previously Research Scientist at Topaz Labs (2025 – Sep 2026)</div>
         <div class="timeline-company">Generative image enhancement, restoration, and production model ownership</div>
         <ul>
-          <li>Developed and owned core model work for <strong>Wonder3 and Wonder3.5</strong>, Topaz's flagship image-enhancement models.</li>
+          <li>Developed and owned core model work for <strong>Wonder 3 and Wonder 3.5</strong>, production image-enhancement models.</li>
           <li>Developed <strong>Recover v3</strong> for restoration of degraded and low-quality imagery.</li>
           <li>Worked end-to-end across model architecture, training, evaluation, optimization, and production deployment.</li>
         </ul>
@@ -204,7 +212,9 @@
     <h2>Selected Highlights</h2>
     <div class="card">
       <ul class="news-list">
-        <li><strong>2025–2026:</strong> Developed production image models including <strong>Recover v3</strong> and <strong>Wonder3 / Wonder3.5</strong> at Topaz Labs.</li>
+        <li><strong>September 2026:</strong> <a href="https://blog.adobe.com/en/publish/2026/09/23/adobe-completes-acquisition-of-topaz-labs"><strong>Adobe completed its acquisition of Topaz Labs</strong></a>, where I work on production image models.</li>
+        <li><strong>August 2026:</strong> <a href="https://www.topazlabs.com/news"><strong>Wonder 3.5 launched</strong></a>; contributed core model development and ownership.</li>
+        <li><strong>2025–2026:</strong> Developed production image models including <strong>Recover v3</strong> and <strong>Wonder 3 / 3.5</strong> at Topaz Labs.</li>
         <li><strong>2024:</strong> Joined Picsart AI Research as Senior Research Scientist and led Stable Diffusion-based product research.</li>
         <li><strong>2023:</strong> Released Topaz's local generative image-editing capability, deploying diffusion models on consumer laptops.</li>
         <li><strong>2023:</strong> <strong>Image as Set of Points</strong> accepted to ICLR as a <strong>top-5% Oral</strong>.</li>
@@ -216,7 +226,7 @@
   </section>
 
   <section class="section">
-    <h2>Selected Publications <span class="small-note">[<a href="https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en">Full list on Google Scholar</a>]</span></h2>
+    <h2 id="publications">Selected Publications <span class="small-note">[<a href="https://scholar.google.com/citations?user=7s-TBDUAAAAJ&hl=en">Full list on Google Scholar</a>]</span></h2>
     <div class="card">
       <div class="pub">
         <img src="./pic/SAMSLR.png" alt="Skeleton-aware multi-modal sign language recognition" />
@@ -302,12 +312,12 @@
         <li><strong>4th Place</strong>, CVPR 2021 Challenge on Agriculture Vision.</li>
         <li><strong>Star Intern of the Year</strong>, Zebra Technologies, 2019.</li>
         <li><strong>GapFund360 Award</strong>, Northeastern University, 2018.</li>
-        <li><strong>PC Member / Reviewer:</strong> CVPR, ICCV, AAAI, IJCAI, FG, TPAMI, TIP, TCSVT, IET Image Processing, JEI, CIM.</li>
+        <li><strong>Peer review:</strong> Approximately <strong>59 completed reviews</strong> (self-reported) across conferences and journals including CVPR, ICCV, ICLR, AAAI, IJCAI, TPAMI, TIP, TCSVT, and other venues.</li>
       </ul>
     </div>
   </section>
 
-  <footer>Last updated September 2026.</footer>
+  <footer>Last updated September 27, 2026. · <a href="https://github.com/Sun1992">GitHub</a> · <a href="https://scholar.google.com/citations?user=7s-TBDUAAAAJ&amp;hl=en">Google Scholar</a></footer>
 </div>
 </body>
 </html>
